@@ -1,0 +1,10 @@
+services:
+  timeweb-ddns:
+    build: .
+    container_name: timeweb-ddns
+    env_file: .env
+    environment:
+      - DATA_DIR=/data
+    volumes:
+      - ./data:/data
+    shm_size: '2gb'
